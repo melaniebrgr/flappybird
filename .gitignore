@@ -1,0 +1,7 @@
+site/js/min/
+_dev
+bower_components/
+node_modules/
+config.codekit
+flappybird.sublime-project
+flappybird.sublime-workspace
