@@ -9,31 +9,23 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var webserver = require('gulp-webserver');
 
-// JavaScript linting task
+// JavaScript site task, lint JS
 gulp.task('jshint', function() {
   return gulp.src('site/js/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('jshint-stylish'));
 });
 
-// Compile Sass task
+// SCSS site task, compile Sass to task
 gulp.task('sass', function() {
   return gulp.src('site/scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('site/css'));
 });
 
-// Watch task
-gulp.task('watch', function() {
-  gulp.watch('site/js/*.js', ['jshint']);
-  gulp.watch('site/scss/*.scss', ['sass']);
-});
-
-// Default task
-gulp.task('default', ['jshint', 'sass', 'watch']);
-
-// Minify index
+// HTML build task, minify index.html
 gulp.task('html', function() {
   return gulp.src('site/index.html')
     .pipe(minifyHTML())
@@ -57,12 +49,31 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('build/css'));
 });
 
-// Image optimization task
+// Image build task, optimizes images
 gulp.task('images', function() {
   return gulp.src('site/img/*')
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'));
 });
 
+// Watch task
+gulp.task('watch', function() {
+  gulp.watch('site/js/*.js', ['jshint']);
+  gulp.watch('site/scss/*.scss', ['sass']);
+});
+
+// site task, default
+gulp.task('default', ['jshint', 'sass', 'watch']);
+
 // Build task
 gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+
+// Webserver
+gulp.task('webserver', function() {
+  gulp.src('site')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
+});
