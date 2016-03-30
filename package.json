@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browserify": "^13.0.0",
+    "eyeglass": "^0.8.3",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.0",
@@ -27,5 +28,8 @@
     "node-neat": "^1.7.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "bourbon-neat": "^1.7.4"
   }
 }

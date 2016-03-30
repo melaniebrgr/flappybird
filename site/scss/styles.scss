@@ -2,3 +2,9 @@
 @import 'base/base';
 // @import 'components/*';
 // @import 'patterns/*';
+@import "node_modules/bourbon/app/assets/stylesheets/_bourbon";
+// @import "neat";
+
+body {
+	@include background(linear-gradient(red, green) left repeat);
+}

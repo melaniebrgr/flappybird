@@ -354,4 +354,8 @@ th {
   padding: 0; }
 
 html {
-  font-family: "PT Mono", "Courier New", Times, "Times New Roman", serif; }
+  font-family: Arial, "Times New Roman", serif; }
+
+body {
+  background: -webkit-linear-gradient(red, green);
+  background: linear-gradient(red, green); }

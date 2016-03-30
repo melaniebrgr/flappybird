@@ -11,6 +11,13 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var webserver = require('gulp-webserver');
 
+var paths = {
+  assets: [
+    'site/js/vendor/jquery-1.12.0.min.js',
+    'site/js/vendor/modernizr-2.8.3.min.js'
+  ]
+};
+
 // JavaScript site task, lint JS
 gulp.task('jshint', function() {
   return gulp.src('site/js/*.js')
@@ -19,7 +26,7 @@ gulp.task('jshint', function() {
 });
 // SCSS site task, compile Sass to task
 gulp.task('sass', function() {
-  return gulp.src('site/scss/**.scss')
+  return gulp.src('site/scss/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('site/css'));
 });
@@ -52,25 +59,31 @@ gulp.task('images', function() {
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'));
 });
-
-
-// Watch task
-gulp.task('watch', function() {
-  gulp.watch('site/js/*.js', ['jshint']);
-  gulp.watch('site/scss/**.scss', ['sass']);
+gulp.task('copy', function() {
+  return gulp.src(paths.assets, {
+    base: 'site'
+  })
+    .pipe(gulp.dest('build'))
+  ;
 });
-// site task, default
-gulp.task('default', ['jshint', 'sass', 'watch']);
+
+
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'copy']);
+// Watch task
+gulp.task('default', ['build','webserver'], function(){
+  gulp.watch('./site/js/*.js', ['jshint', 'build']);
+  gulp.watch('./site/scss/**/*.scss', ['sass', 'build']);
+});
 
 
 // Webserver
+// Note: include directoryListing to get actual page (not file structure)
 gulp.task('webserver', function() {
-  gulp.src('site')
+  gulp.src('build')
     .pipe(webserver({
       livereload: true,
-      directoryListing: true,
+      directoryListing: { enable: true, path: 'flappybird' },
       open: true
     }));
 });
