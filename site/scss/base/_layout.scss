@@ -42,20 +42,30 @@ main > section {
 	&.features {
 		@include clearfix;
 		ul { 
-			padding: 0; 
 			@include fill-parent();
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			@media screen and ($mediumish) {
+				flex-direction: row;
+			}
 			li {
 				@include fill-parent();
 				@include padding-sm;
 				display: inline-block;
-				margin-bottom: 1.5em;
+				margin-bottom: 1em;
 				&:last-child {
 					margin-bottom: 0;
 				}
 				@media screen and ($mediumish) {
 					@include span-columns(4);
-					// height: em(230);
-			    }
+					@include padding-md;
+					margin-bottom: 0;			
+					// &:last-child {
+					// 	margin-bottom: 1.5em;
+					// }
+			    }	    
 			}
 		}
 		img {
@@ -74,11 +84,10 @@ main > section {
 			span {
 				line-height: 3em;
 			}
-			@media screen and ($mediumish) {
+			@media screen and (min-width: 600px) {
 				@include span-columns(4);
-				@include shift(4);
-				margin-bottom: 1.5em;
-			}			
+				@include shift(4);				
+			}		
 		}
 	}	
 }

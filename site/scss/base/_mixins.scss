@@ -1,3 +1,4 @@
+// Centering
 @mixin center-vh {
   position: absolute;
   top: 50%;
@@ -16,10 +17,16 @@
 	margin-right: auto;
 }
 
+// Padding
 @mixin padding-sm {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 }
+@mixin padding-md {
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+}
+
 
 @mixin three-in-a-row {
 	ul {
