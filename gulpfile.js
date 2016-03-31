@@ -72,8 +72,9 @@ gulp.task('copy', function() {
 gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'copy']);
 // Watch task
 gulp.task('default', ['build','webserver'], function(){
-  gulp.watch('./site/js/*.js', ['jshint', 'build']);
-  gulp.watch('./site/scss/**/*.scss', ['sass', 'build']);
+  gulp.watch('site/index.html', ['build']);
+  gulp.watch('./site/js/*.js', ['build']);
+  gulp.watch('./site/scss/**/*.scss', ['build']);
 });
 
 

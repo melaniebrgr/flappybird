@@ -15,3 +15,19 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+@mixin padding-sm {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+@mixin three-in-a-row {
+	ul {
+		@include clearfix;
+		padding: 0;
+		text-align: center;
+		li {
+			@include span-columns(4);
+		}
+	}
+}

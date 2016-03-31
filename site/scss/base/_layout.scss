@@ -1,0 +1,68 @@
+nav, main, footer {
+	@include outer-container;
+}
+nav {
+	@include three-in-a-row;
+}
+header {
+	@include fill-parent();
+	height: 10em;
+	position: relative;
+	h1 {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+	}
+}
+main > section {
+	@include padding-sm;
+	&.intro {
+		@include clearfix;
+		img { @include span-columns(1); }
+		p {
+			@include span-columns(11);
+			margin-top: 0;
+		}
+	}
+	&.features {
+		@include clearfix;
+		ul { 
+			padding: 0; 
+			@include fill-parent();
+			li {
+				@include fill-parent();
+				@include padding-sm;
+				display: inline-block;
+				margin-bottom: 1.5em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		img {
+			@include span-columns(8);
+			@include shift(2);
+			@include clearfix;
+			padding-top: 1em;
+			padding-bottom: 0.5em;
+		}
+	}
+	&.call-to-action {
+		div {
+			@include fill-parent();
+			@include padding-sm;
+			text-align: center;
+			span {
+				line-height: 3em;
+			}
+		}
+	}	
+}
+footer {
+	.sign-up, > p {
+		@include padding-sm;
+	}
+	@include three-in-a-row;
+}
+
