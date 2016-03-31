@@ -1,5 +1,8 @@
 nav, main, footer {
 	@include outer-container;
+	@media screen and ($largish) {
+		max-width: 940px;
+	}	
 }
 nav {
 	@include three-in-a-row;
@@ -19,11 +22,22 @@ main > section {
 	@include padding-sm;
 	&.intro {
 		@include clearfix;
-		img { @include span-columns(1); }
-		p {
-			@include span-columns(11);
-			margin-top: 0;
+		margin-bottom: 1.5em;		
+		img { 
+			@include span-columns(2); 
+			@media screen and ($mediumish) {
+				@include span-columns(1 of 10);
+			}	
 		}
+		p {
+			@include span-columns(10);
+			@media screen and ($mediumish) {
+				@include span-columns(9 of 10);
+			}				
+		}
+		@media screen and ($mediumish) {
+			@include span-columns(10);
+		}		
 	}
 	&.features {
 		@include clearfix;
@@ -38,6 +52,10 @@ main > section {
 				&:last-child {
 					margin-bottom: 0;
 				}
+				@media screen and ($mediumish) {
+					@include span-columns(4);
+					// height: em(230);
+			    }
 			}
 		}
 		img {
@@ -56,12 +74,20 @@ main > section {
 			span {
 				line-height: 3em;
 			}
+			@media screen and ($mediumish) {
+				@include span-columns(4);
+				@include shift(4);
+				margin-bottom: 1.5em;
+			}			
 		}
 	}	
 }
 footer {
 	.sign-up, > p {
 		@include padding-sm;
+		@media screen and ($mediumish) {
+			@include span-columns(10);
+		}
 	}
 	@include three-in-a-row;
 }
