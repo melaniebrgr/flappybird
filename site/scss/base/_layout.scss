@@ -61,10 +61,7 @@ main > section {
 				@media screen and ($mediumish) {
 					@include span-columns(4);
 					@include padding-md;
-					margin-bottom: 0;			
-					// &:last-child {
-					// 	margin-bottom: 1.5em;
-					// }
+					margin-bottom: 0;
 			    }	    
 			}
 		}
@@ -100,4 +97,3 @@ footer {
 	}
 	@include three-in-a-row;
 }
-

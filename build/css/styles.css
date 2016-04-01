@@ -542,6 +542,9 @@ html {
   box-shadow: #000 4px 4px;
   color: #fff;
   font-size: 1.2em; }
+  .button:hover {
+    background-color: #00FFFF;
+    color: #0000FF; }
 
 a {
   color: #0000FF; }
