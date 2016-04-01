@@ -10,8 +10,293 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/app.js"></script>
+	<style>
+	*,
+	*::after,
+	*::before {
+	  box-sizing: inherit;
+	}
+
+	html {
+	  font-family: sans-serif;
+	  -ms-text-size-adjust: 100%;
+	  -webkit-text-size-adjust: 100%;
+	  box-sizing: border-box;
+	  font-family: "PT Mono", "Courier New", Times, "Times New Roman", serif;
+	}
+
+	body {
+	  margin: 0;
+	}
+
+	footer,
+	header,
+	main,
+	nav,
+	section {
+	  display: block;
+	}
+
+	nav,
+	main,
+	footer {
+	  max-width: 1200px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	nav::after,
+	main::after,
+	footer::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	a {
+	  background-color: transparent;
+	  color: #0000FF;
+	}
+
+	h1 {
+	  font-size: 2em;
+	  margin: 0.67em 0;
+	}
+
+	img {
+	  border: 0;
+	}
+
+	nav ul {
+	  padding: 0;
+	  text-align: center;
+	}
+
+	nav ul::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	nav ul li {
+	  float: left;
+	  display: block;
+	  margin-right: 2.35765%;
+	  width: 31.76157%;
+	}
+
+	nav ul li:last-child {
+	  margin-right: 0;
+	}
+
+	header {
+	  width: 100%;
+	  height: 10em;
+	  position: relative;
+	}
+
+	header h1 {
+	  position: relative;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  text-align: center;
+	}
+
+	main > section {
+	  padding-left: 1.5em;
+	  padding-right: 1.5em;
+	}
+
+	main > section.intro {
+	  margin-bottom: 1.5em;
+	}
+
+	main > section.intro::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	main > section.intro img {
+	  float: left;
+	  display: block;
+	  margin-right: 2.35765%;
+	  width: 14.70196%;
+	}
+
+	main > section.intro p {
+	  float: left;
+	  display: block;
+	  margin-right: 2.35765%;
+	  width: 82.94039%;
+	}
+
+	main > section.intro p:last-child {
+	  margin-right: 0;
+	}
+
+	main > section.features::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	main > section.features ul {
+	  width: 100%;
+	  padding: 0;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+
+	main > section.features ul li {
+	  width: 100%;
+	  padding-left: 1.5em;
+	  padding-right: 1.5em;
+	  display: inline-block;
+	  margin-bottom: 1em;
+	}
+
+	main > section.features ul li:last-child {
+	  margin-bottom: 0;
+	}
+
+	main > section.features img {
+	  float: left;
+	  display: block;
+	  margin-right: 2.35765%;
+	  width: 65.88078%;
+	  margin-left: 17.05961%;
+	  padding-top: 1em;
+	  padding-bottom: 0.5em;
+	}
+
+	main > section.features img::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	main > section.call-to-action div {
+	  width: 100%;
+	  padding-left: 1.5em;
+	  padding-right: 1.5em;
+	  text-align: center;
+	}
+
+	main > section.call-to-action div span {
+	  line-height: 3em;
+	}
+
+	main > section.call-to-action div:last-child {
+	  margin-right: 0;
+	}
+
+	footer .sign-up,
+	footer > p {
+	  padding-left: 1.5em;
+	  padding-right: 1.5em;
+	}
+
+	footer > p:last-child {
+	    margin-right: 0;
+	}
+
+	footer ul {
+	  padding: 0;
+	  text-align: center;
+	}
+
+	footer ul::after {
+	  clear: both;
+	  content: "";
+	  display: table;
+	}
+
+	footer ul li {
+	  float: left;
+	  display: block;
+	  margin-right: 2.35765%;
+	  width: 31.76157%;
+	}
+
+	footer ul li:last-child {
+	  margin-right: 0;
+	}
+
+	.button {
+	  background-color: #0000FF;
+	  border: black 4px solid;
+	  box-shadow: #000 4px 4px;
+	  color: #fff;
+	  font-size: 1.2em;
+	}
+
+	.features li {
+	  border: black 4px solid;
+	}
+
+	@media screen and (min-width: 500px) {
+	  main > section.intro img {
+	    float: left;
+	    display: block;
+	    margin-right: 2.84259%;
+	    width: 7.44167%;
+	  }
+	  footer .sign-up,
+	  footer > p {
+	    float: left;
+	    display: block;
+	    margin-right: 2.35765%;
+	    width: 82.94039%;
+	  }
+	  main > section.intro {
+	    float: left;
+	    display: block;
+	    margin-right: 2.35765%;
+	    width: 82.94039%;
+	  } 
+	  main > section.intro p {
+	    float: left;
+	    display: block;
+	    margin-right: 2.84259%;
+	    width: 89.71574%;
+	  }
+	  main > section.features ul {
+	    flex-direction: row;
+	  }
+	  main > section.features ul li {
+	    float: left;
+	    display: block;
+	    margin-right: 2.35765%;
+	    width: 31.76157%;
+	    padding-left: 0.75em;
+	    padding-right: 0.75em;
+	    margin-bottom: 0;
+	  }
+	  main > section.features ul li:last-child {
+	    margin-right: 0;
+	  }
+	}
+
+	@media screen and (min-width: 600px) {
+	  main > section.call-to-action div {
+	    float: left;
+	    display: block;
+	    margin-right: 2.35765%;
+	    width: 31.76157%;
+	    margin-left: 34.11922%;
+	  }
+
+	@media screen and (min-width: 940px) {
+	  nav,
+	  main,
+	  footer {
+	    max-width: 940px;
+	  }
+	}		
+	</style>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>	
 <body>
 	<nav>
@@ -67,5 +352,7 @@
 		</ul>
 		<p>Note sure what, if any, copyright or terms of use apply here. Also, privacy statements.</p>
 	</footer>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
 </body>
 </html>
