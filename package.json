@@ -30,6 +30,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "bourbon-neat": "^1.7.4"
+    "bourbon-neat": "^1.7.4",
+    "velocity-animate": "^1.2.3"
   }
 }

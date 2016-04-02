@@ -41,6 +41,7 @@ main > section {
 	}
 	&.features {
 		@include clearfix;
+		position: relative;
 		ul { 
 			@include fill-parent();
 			padding: 0;
