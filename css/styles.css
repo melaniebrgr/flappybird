@@ -508,32 +508,33 @@ main > section {
         main > section.call-to-action div:last-child {
           margin-right: 0; } }
 
-footer .sign-up, footer > p {
-  padding-left: 1.5em;
-  padding-right: 1.5em; }
-  @media screen and (min-width: 500px) {
-    footer .sign-up, footer > p {
+footer {
+  margin-top: 2em; }
+  footer .sign-up, footer > p {
+    padding-left: 1.5em;
+    padding-right: 1.5em; }
+    @media screen and (min-width: 500px) {
+      footer .sign-up, footer > p {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        footer .sign-up:last-child, footer > p:last-child {
+          margin-right: 0; } }
+  footer ul {
+    padding: 0;
+    text-align: center; }
+    footer ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    footer ul li {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 82.94039%; }
-      footer .sign-up:last-child, footer > p:last-child {
-        margin-right: 0; } }
-
-footer ul {
-  padding: 0;
-  text-align: center; }
-  footer ul::after {
-    clear: both;
-    content: "";
-    display: table; }
-  footer ul li {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    footer ul li:last-child {
-      margin-right: 0; }
+      width: 31.76157%; }
+      footer ul li:last-child {
+        margin-right: 0; }
 
 html {
   font-family: "PT Mono", "Courier New", Times, "Times New Roman", serif; }
