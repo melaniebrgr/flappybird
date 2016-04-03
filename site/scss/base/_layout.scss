@@ -90,6 +90,7 @@ main > section {
 	}	
 }
 footer {
+	margin-top: 2em;
 	.sign-up, > p {
 		@include padding-sm;
 		@media screen and ($mediumish) {
