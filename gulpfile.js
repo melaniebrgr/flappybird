@@ -14,7 +14,8 @@ var webserver = require('gulp-webserver');
 var paths = {
   assets: [
     'site/js/vendor/jquery-1.12.0.min.js',
-    'site/js/vendor/modernizr-2.8.3.min.js'
+    'site/js/vendor/modernizr-2.8.3.min.js',
+    'site/js/vendor/picturefill.min.js'
   ]
 };
 

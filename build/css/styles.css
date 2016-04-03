@@ -561,3 +561,8 @@ a {
   border: black 4px solid;
   opacity: 0;
   margin-top: 20px; }
+
+header {
+  background-color: green;
+  background: url(../img/header.png) no-repeat;
+  background-size: 95%; }

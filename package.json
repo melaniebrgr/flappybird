@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "bourbon-neat": "^1.7.4",
+    "picturefill": "^3.0.2",
     "velocity-animate": "^1.2.3"
   }
 }

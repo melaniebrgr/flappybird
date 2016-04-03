@@ -1,6 +1,0 @@
-<svg id="placeholder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-  <title>placeholder</title>
-  <path d="M25,1A24,24,0,1,1,1,25,24,24,0,0,1,25,1m0-1A25,25,0,1,0,50,25,25,25,0,0,0,25,0h0Z" transform="translate(0 0)" fill="#939393"/>
-  <line x1="7.32" y1="7.32" x2="42.65" y2="42.65" fill="none" stroke="#939393" stroke-miterlimit="10"/>
-  <line x1="7.32" y1="42.65" x2="42.65" y2="7.32" fill="none" stroke="#939393" stroke-miterlimit="10"/>
-</svg>
