@@ -22,21 +22,25 @@ main > section {
 	@include padding-sm;
 	&.intro {
 		@include clearfix;
-		margin-bottom: 1.5em;		
+		margin-bottom: 1.5em;
+		display: flex;
+		align-items: center;	
 		img { 
-			@include span-columns(2); 
+			@include span-columns(1.5); 
 			@media screen and ($mediumish) {
 				@include span-columns(1 of 10);
 			}	
 		}
 		p {
-			@include span-columns(10);
+			@include span-columns(11.5);
 			@media screen and ($mediumish) {
 				@include span-columns(9 of 10);
 			}				
 		}
 		@media screen and ($mediumish) {
 			@include span-columns(10);
+			display: flex;
+			align-items: center;
 		}		
 	}
 	&.features {

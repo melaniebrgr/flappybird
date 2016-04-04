@@ -13,7 +13,7 @@ $(function() {
 			translateY: "-20px",
 		}, {
 			duration: 500,
-			delay: (i*250),
+			delay: (i*250+250),
 			easing: "easeOutQuad"
 		});
 	});
