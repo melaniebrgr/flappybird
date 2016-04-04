@@ -400,7 +400,9 @@ main > section {
   padding-left: 1.5em;
   padding-right: 1.5em; }
   main > section.intro {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center; }
     main > section.intro::after {
       clear: both;
       content: "";
@@ -409,7 +411,7 @@ main > section {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 14.70196%; }
+      width: 10.43705%; }
       main > section.intro img:last-child {
         margin-right: 0; }
       @media screen and (min-width: 500px) {
@@ -424,7 +426,7 @@ main > section {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 82.94039%; }
+      width: 95.7351%; }
       main > section.intro p:last-child {
         margin-right: 0; }
       @media screen and (min-width: 500px) {
@@ -440,7 +442,9 @@ main > section {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%; }
+        width: 82.94039%;
+        display: flex;
+        align-items: center; }
         main > section.intro:last-child {
           margin-right: 0; } }
   main > section.features {
@@ -563,6 +567,10 @@ a {
   margin-top: 20px; }
 
 header {
-  background-color: green;
-  background: url(../img/header.png) no-repeat;
-  background-size: 95%; }
+  background: url(../img/header-small.jpg) no-repeat center center; }
+  @media screen and (min-width: 630px) {
+    header {
+      background: url(../img/header-medium.jpg) no-repeat center center; } }
+  @media screen and (min-width: 940px) {
+    header {
+      background: url(../img/header-large.jpg) no-repeat center center; } }
