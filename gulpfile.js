@@ -74,8 +74,9 @@ gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'co
 // Watch task
 gulp.task('default', ['build','webserver'], function(){
   gulp.watch('site/index.html', ['build']);
-  gulp.watch('./site/js/*.js', ['build']);
-  gulp.watch('./site/scss/**/*.scss', ['build']);
+  gulp.watch('./site/js/*.js', ['jshint', 'build']);
+  gulp.watch('./site/scss/**/*.scss', ['sass']);
+  gulp.watch('./site/css/*.css', ['build']);
 });
 
 
