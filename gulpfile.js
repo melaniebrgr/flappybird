@@ -57,7 +57,7 @@ gulp.task('styles', function() {
 // Image build task, optimizes images
 gulp.task('images', function() {
   return gulp.src('site/img/*')
-    .pipe(imagemin())
+    .pipe(imagemin({progressive: true}))
     .pipe(gulp.dest('build/img'));
 });
 gulp.task('copy', function() {
