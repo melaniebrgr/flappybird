@@ -1,10 +1,10 @@
 header {
     background: url(../img/header-small.jpg) no-repeat center center;
     @media screen and (min-width: 630px) {
-    	
+
         background: url(../img/header-medium.jpg) no-repeat center center;
     }
     @media screen and (min-width: 940px) {
         background: url(../img/header-large.jpg) no-repeat center center;
-    }    
+    }
 }
