@@ -82,10 +82,10 @@ gulp.task('copy', function() {
 
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'webp', 'copy']);
+gulp.task('build', ['html', 'scripts', 'styles', 'images', 'webp', 'copy']);
 // Watch task
 gulp.task('default', ['build','webserver'], function(){
-  gulp.watch('.site/index.html', ['build']);
+  gulp.watch('./site/index.html', ['build']);
   gulp.watch('./site/js/*.js', ['jshint', 'build']);
   gulp.watch('./site/scss/**/*.scss', ['sass']);
   gulp.watch('./site/css/*.css', ['build']);

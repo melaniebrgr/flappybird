@@ -412,20 +412,20 @@ main > section {
       clear: both;
       content: "";
       display: table; }
-    main > section.intro img {
+    main > section.intro picture {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 10.43705%; }
-      main > section.intro img:last-child {
+      main > section.intro picture:last-child {
         margin-right: 0; }
       @media screen and (min-width: 500px) {
-        main > section.intro img {
+        main > section.intro picture {
           float: left;
           display: block;
           margin-right: 2.84259%;
           width: 7.44167%; }
-          main > section.intro img:last-child {
+          main > section.intro picture:last-child {
             margin-right: 0; } }
     main > section.intro p {
       float: left;

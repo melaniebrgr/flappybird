@@ -25,7 +25,7 @@ main > section {
 		margin-bottom: 1.5em;
 		display: flex;
 		align-items: center;	
-		img { 
+		picture { 
 			@include span-columns(1.5); 
 			@media screen and ($mediumish) {
 				@include span-columns(1 of 10);
