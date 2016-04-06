@@ -10,6 +10,7 @@ var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var webserver = require('gulp-webserver');
+var imageminWebp = require('imagemin-webp');
 
 var paths = {
   assets: [
@@ -60,6 +61,12 @@ gulp.task('images', function() {
     .pipe(imagemin({progressive: true}))
     .pipe(gulp.dest('build/img'));
 });
+// WebP image conversion build task
+gulp.task('webp', function () {
+  return gulp.src('site/img/*.{jpg,png}')
+    .pipe(imageminWebp({quality: 80})())
+    .pipe(gulp.dest('build/img'));
+});
 gulp.task('copy', function() {
   return gulp.src(paths.assets, {
     base: 'site'
@@ -70,13 +77,14 @@ gulp.task('copy', function() {
 
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'copy']);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'webp', 'copy']);
 // Watch task
 gulp.task('default', ['build','webserver'], function(){
-  gulp.watch('site/index.html', ['build']);
+  gulp.watch('.site/index.html', ['build']);
   gulp.watch('./site/js/*.js', ['jshint', 'build']);
   gulp.watch('./site/scss/**/*.scss', ['sass']);
   gulp.watch('./site/css/*.css', ['build']);
+  gulp.watch('./site/img/*', ['build']);
 });
 
 
