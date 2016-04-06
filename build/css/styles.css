@@ -393,6 +393,7 @@ header {
   header h1 {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center; }
 
@@ -401,7 +402,11 @@ main > section {
   padding-right: 1.5em; }
   main > section.intro {
     margin-bottom: 1.5em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center; }
     main > section.intro::after {
       clear: both;
@@ -443,7 +448,11 @@ main > section {
         display: block;
         margin-right: 2.35765%;
         width: 82.94039%;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         main > section.intro:last-child {
           margin-right: 0; } }
@@ -456,11 +465,19 @@ main > section {
     main > section.features ul {
       width: 100%;
       padding: 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
       align-items: stretch; }
       @media screen and (min-width: 500px) {
         main > section.features ul {
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
           flex-direction: row; } }
       main > section.features ul li {
         width: 100%;

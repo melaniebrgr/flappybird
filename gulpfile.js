@@ -11,6 +11,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var webserver = require('gulp-webserver');
 var imageminWebp = require('imagemin-webp');
+var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   assets: [
@@ -26,10 +27,14 @@ gulp.task('jshint', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
-// SCSS site task, compile Sass to task
+// SCSS site task, compile Sass and autoprefix
 gulp.task('sass', function() {
   return gulp.src('site/scss/**/*.scss')
     .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('site/css'));
 });
 

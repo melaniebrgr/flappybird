@@ -12,6 +12,7 @@
     "browserify": "^13.0.0",
     "eyeglass": "^0.8.3",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^3.1.0",
