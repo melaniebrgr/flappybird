@@ -1,3 +1,24 @@
+window.addEventListener("load", function(event) {
+	// Calculate TTFB (time to first byte) with Navigation Timing API
+	// Calculate back-end load time with Navigation Timing API
+	// Calculate front-end load time with Navigation Timing API
+	// Console.log the names, resource type, and load times for all our resources using the Resource Timing API		
+	var loadEventTime = new Date().getTime(),
+		timings = window.performance.timing,
+		ttfb = timings.responseStart - timings.navigationStart,
+		backEndLoadTime = timings.responseStart - timings.requestStart,
+		frontEndLoadTime = loadEventTime - timings.domLoading,
+		resources = performance.getEntriesByType("resource");
+		answer = 'TTFB: '+ttfb+'ms\nBack-end load time: '+backEndLoadTime+'ms\nFront-end load time: '+frontEndLoadTime+'ms\n\nResources:\n';
+		
+	resources.forEach(function(el) {
+		var loadTime = el.responseEnd - el.responseStart;
+		answer += 'name: '+el.name+' \ntype: '+el.entryType+' \nload time: '+loadTime.toFixed(2)+'\n\n';
+	});
+
+	console.log(answer);
+});
+
 $(function() {
 	// Load below-the-fold CSS
 	// the CSS will automatically execute when loaded
